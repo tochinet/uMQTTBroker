@@ -4,7 +4,11 @@
  * Minimal Demo: the program simply starts a broker and waits for any client to connect.
  */
 
+#if defined(ESP8266) 
 #include <ESP8266WiFi.h>
+#else
+#include <WiFi.h>
+#endif
 #include "uMQTTBroker.h"
 
 uMQTTBroker myBroker;
