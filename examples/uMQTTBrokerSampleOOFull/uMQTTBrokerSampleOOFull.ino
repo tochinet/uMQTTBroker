@@ -6,7 +6,11 @@
  * Try to connect from a remote client and publish something - the console will show this as well.
  */
 
+#if defined(ESP8266) 
 #include <ESP8266WiFi.h>
+#else
+#include <WiFi.h>
+#endif
 #include "uMQTTBroker.h"
 
 /*
